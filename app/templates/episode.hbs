@@ -1,13 +1,4 @@
 {{outlet}}
 
 <h1>{{model.title}}</h1>
-
-{{#if model.parent}}
-{{#link-to 'episode' model.parent}}
-  Don't like
-  {{/link-to}}
-{{/if}}
-
-<button>
-  Record
-</button>
+{{podcast-player episode=model}}

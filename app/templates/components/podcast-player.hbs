@@ -1,0 +1,13 @@
+{{yield}}
+
+{{#if episode.parent}}
+{{#link-to 'episode' episode.parent}}
+  Don't like
+{{/link-to}}
+{{/if}}
+
+{{#if deadEnd}}
+<button>
+Record
+</button>
+{{/if}}
