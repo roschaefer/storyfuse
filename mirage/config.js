@@ -50,7 +50,7 @@ export default function() {
         type: 'episodes',
         id:3,
         attributes: {
-          title: 'Third episode',
+          title: 'One Ending',
           url: 'http://podcasts.nytimes.com/podcasts/2008/03/14/18healthupdate.mp3'
         },
         "relationships": {

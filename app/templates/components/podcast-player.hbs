@@ -1,4 +1,4 @@
-<h2>{{episode.title}}</h2>
+<h2 class="ui huge header">{{episode.title}}</h2>
 
    <div class='container'>
      <div class='row'>
@@ -21,7 +21,7 @@
 
 <p>
 {{#if episode.parent}}
-{{#link-to 'episode' episode.parent}}
+{{#link-to 'episode' episode.parent class="ui huge primary button"}}
   Don't like
 {{/link-to}}
 {{/if}}
@@ -29,12 +29,12 @@
 
 <p>
 {{#if deadEnd}}
-<button>
+<button class="ui huge primary button">
 Record
 </button>
 {{else}}
   {{#each episode.children as |child|}}
-  {{#link-to 'episode' child}}
+  {{#link-to 'episode' child class="ui huge primary button"}}
     {{child.title}}
 {{/link-to}}
 {{/each}}
