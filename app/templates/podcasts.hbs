@@ -1,0 +1,9 @@
+<div class="podcasts">
+  <h1>Podcasts</h1>
+  {{#each model as |podcast|}}
+    {{#link-to 'podcast' podcast class="listen-to-podcast"}}
+      {{podcast.title}}
+    {{/link-to}}
+  {{/each}}
+  {{outlet}}
+</div>
