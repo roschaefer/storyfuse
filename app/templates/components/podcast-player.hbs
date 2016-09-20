@@ -22,6 +22,7 @@
 <p>
 {{#if episode.parent}}
 {{#link-to 'episode' episode.parent class="ui huge primary button"}}
+  <i class="ui icon remove"></i>
   Don't like
 {{/link-to}}
 {{/if}}
@@ -30,6 +31,7 @@
 <p>
 {{#if deadEnd}}
 <button class="ui huge primary button">
+  <i class="ui icon circle"></i>
 Record
 </button>
 {{else}}
