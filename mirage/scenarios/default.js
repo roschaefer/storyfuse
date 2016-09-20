@@ -11,21 +11,43 @@ export default function( server ) {
   //
   let start = server.create('episode', {
     title: 'So it begins',
-    url: 'http://podcasts.nytimes.com/podcasts/2008/03/03/04healthupdate.mp3',
+    url: 'http://betterwithmusic.com/Music/songs/Rossio.mp3',
   });
-  let one   = server.create('episode', {
+
+  let continues   = server.create('episode', {
     title: 'And it continues',
-    url: 'http://podcasts.nytimes.com/podcasts/2008/03/10/12healthupdate.mp3',
+    url: 'http://betterwithmusic.com/Music/songs/Sirens.mp3',
     parent: start
   });
-  server.create('episode', {
-    title: 'This is the first end',
-    url: 'http://podcasts.nytimes.com/podcasts/2008/03/14/18healthupdate.mp3',
-    parent: one
+
+  let notYet = server.create('episode', {
+    title: 'Story is not yet over',
+    url: 'http://betterwithmusic.com/Music/songs/Montmartre.mp3',
+    parent: continues
   });
+
   server.create('episode', {
-    title: 'This is the alternative end',
-    url: 'http://podcasts.nytimes.com/podcasts/2008/03/21/25healthupdate.mp3',
-    parent: one
+    title: 'This is an alternative end',
+    url: 'http://betterwithmusic.com/Music/songs/Breaking_Bad.mp3',
+    parent: continues
+  });
+
+
+  server.create('episode', {
+    title: 'Happy ending',
+    url: 'http://betterwithmusic.com/Music/songs/Dancing.mp3',
+    parent: notYet
+  });
+
+  server.create('episode', {
+    title: 'Bad ending',
+    url: 'http://betterwithmusic.com/Music/songs/Poker.mp3',
+    parent: notYet
+  });
+
+  server.create('episode', {
+    title: 'Weird ending',
+    url: 'http://betterwithmusic.com/Music/songs/Out_of_School.mp3',
+    parent: notYet
   });
 }

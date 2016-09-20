@@ -18,7 +18,7 @@
             Next
             {{/link-to}}
           {{else}}
-            <button class="ui large right floated primary button">
+            <button class="ui large right floated red button">
               <i class="ui icon circle"></i>
               Record
             </button>
@@ -30,19 +30,19 @@
       <div class="column">
 
           {{#if firstAlternative}}
-            {{#link-to 'episode' firstAlternative class="ui large left floated primary button"}}
+            {{#link-to 'episode' firstAlternative class="ui large left floated green button"}}
             {{firstAlternative.title}}
             {{/link-to}}
           {{/if}}
 
 
           {{#if secondAlternative}}
-            {{#link-to 'episode' secondAlternative class="ui large right floated primary button"}}
+            {{#link-to 'episode' secondAlternative class="ui large right floated green button"}}
             {{secondAlternative.title}}
             {{/link-to}}
           {{else}}
             {{#if parent}}
-              <button class="ui large right floated primary button">
+              <button class="ui large right floated red button">
                 <i class="ui icon fork"></i>
                 Create branch
               </button>
