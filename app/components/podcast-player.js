@@ -11,7 +11,7 @@ export default Ember.Component.extend({
     this.set('parent', parent);
     if (parent.get('id')) {
       let alternatives = parent.get('children').reject((a) => {
-        return a == episode;
+        return a === episode;
       });;
       let firstAlternative = alternatives.objectAt(0);
       let secondAlternative = alternatives.objectAt(1);
