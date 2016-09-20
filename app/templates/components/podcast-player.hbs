@@ -24,7 +24,7 @@
           {{else}}
             {{#link-to 'episode.new' class="ui large right floated red button"}}
               <i class="ui icon circle"></i>
-              Record
+              Continue Here
             {{/link-to}}
           {{/if}}
       </div>
@@ -35,14 +35,16 @@
 
           {{#if firstAlternative}}
             {{#link-to 'episode' firstAlternative class="ui large left floated green button"}}
-            {{firstAlternative.title}}
+            Branch A <br/>
+            <small>{{firstAlternative.title}}</small>
             {{/link-to}}
           {{/if}}
 
 
           {{#if secondAlternative}}
             {{#link-to 'episode' secondAlternative class="ui large right floated green button"}}
-            {{secondAlternative.title}}
+            Branch B <br/>
+            <small>{{secondAlternative.title}}</small>
             {{/link-to}}
           {{else}}
             {{#if parent}}
