@@ -1,14 +1,14 @@
 export default function() {
   this.namespace = '/api';
-  this.get('/podcasts', function() {
+  this.get('/episodes/:episode_id', function() {
     return {
-      data: [{
-        type: 'podcasts',
+      data: {
+        type: 'episodes',
         id:1,
         attributes: {
-          title: 'Such a great podcast',
+          title: 'Such a great episode',
         }
-      }]
+      }
     };
   });
 

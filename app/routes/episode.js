@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
+  model(params) {
+    return this.get('store').findRecord('episode', params["episode_id"]);
   }
 });
