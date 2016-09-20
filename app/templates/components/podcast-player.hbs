@@ -3,6 +3,10 @@
     <div class="row">
       <div class="column">
         {{audio-player title=episode.title url=episode.url}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
 
 
           {{#if parent}}
@@ -42,10 +46,10 @@
             {{/link-to}}
           {{else}}
             {{#if parent}}
-              <button class="ui large right floated red button">
+              {{#link-to 'episode.new' parent class="ui large right floated red button"}}
                 <i class="ui icon fork"></i>
                 Create branch
-              </button>
+              {{/link-to}}
             {{/if}}
           {{/if}}
 
