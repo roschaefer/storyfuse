@@ -4,29 +4,51 @@
       <div class="column">
         {{audio-player title=episode.title url=episode.url}}
 
-          <p>
 
-          {{#if episode.parent}}
-            {{#link-to 'episode' episode.parent class="ui large left floated primary button"}}
-            <i class="ui icon remove"></i>
+          {{#if parent}}
+            {{#link-to 'episode' parent class="ui large left floated primary button"}}
+            <i class="ui icon backward"></i>
             Back
             {{/link-to}}
           {{/if}}
 
-          {{#if deadEnd}}
-          <button class="ui large right floated primary button">
-            <i class="ui icon circle"></i>
-            Record
-          </button>
+          {{#if next}}
+            {{#link-to 'episode' next class="ui large right floated primary button"}}
+            <i class="ui icon forward"></i>
+            Next
+            {{/link-to}}
           {{else}}
-            {{#each episode.children as |child|}}
-              {{#link-to 'episode' child class="ui large right floated primary button"}}
-              {{child.title}}
-              {{/link-to}}
-            {{/each}}
+            <button class="ui large right floated primary button">
+              <i class="ui icon circle"></i>
+              Record
+            </button>
+          {{/if}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+
+          {{#if firstAlternative}}
+            {{#link-to 'episode' firstAlternative class="ui large left floated primary button"}}
+            {{firstAlternative.title}}
+            {{/link-to}}
           {{/if}}
 
-          </p>
+
+          {{#if secondAlternative}}
+            {{#link-to 'episode' secondAlternative class="ui large right floated primary button"}}
+            {{secondAlternative.title}}
+            {{/link-to}}
+          {{else}}
+            {{#if parent}}
+              <button class="ui large right floated primary button">
+                <i class="ui icon fork"></i>
+                Create branch
+              </button>
+            {{/if}}
+          {{/if}}
+
       </div>
     </div>
   </div>

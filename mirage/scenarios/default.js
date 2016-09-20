@@ -9,7 +9,6 @@ export default function( server ) {
 
   // server.createList('post', 10);
   //
-  console.log("hello from scenario");
   let start = server.create('episode', {
     title: 'So it begins',
     url: 'http://podcasts.nytimes.com/podcasts/2008/03/03/04healthupdate.mp3',
