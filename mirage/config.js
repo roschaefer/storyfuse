@@ -7,6 +7,7 @@ export default function() {
         id:1,
         attributes: {
           title: 'First episode',
+          url: 'http://podcasts.nytimes.com/podcasts/2008/03/03/04healthupdate.mp3'
         },
         "relationships": {
           "children": {
@@ -27,6 +28,7 @@ export default function() {
         id:2,
         attributes: {
           title: 'Next episode',
+          url: 'http://podcasts.nytimes.com/podcasts/2008/03/10/12healthupdate.mp3'
         },
         "relationships": {
           "parent": {
@@ -49,6 +51,7 @@ export default function() {
         id:3,
         attributes: {
           title: 'Third episode',
+          url: 'http://podcasts.nytimes.com/podcasts/2008/03/14/18healthupdate.mp3'
         },
         "relationships": {
           "parent": {
@@ -66,6 +69,7 @@ export default function() {
         id:4,
         attributes: {
           title: 'A different ending',
+          url: 'http://podcasts.nytimes.com/podcasts/2008/03/21/25healthupdate.mp3'
         },
         "relationships": {
           "parent": {
