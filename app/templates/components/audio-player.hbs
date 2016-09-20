@@ -1,18 +1,12 @@
-{{yield}}
 <div class='container'>
-  <div class='row'>
-
-    <div id="mapid"></div>
-    <div id='player'>
-      <div id='current-title'>
-      </div>
-      <audio id="audio" preload="auto" tabindex="0" controls="" >
-        <source id="audio-source" src={{url}}>
-          Your Fallback goes here
-      </audio>
-        <table id="playlist" class='table table-striped table-bordered table-hover'>
-        </table >
+  <div id='player'>
+    <div id='current-title'>
+      {{title}}
     </div>
+    <audio id="audio" preload="auto" tabindex="0" controls="" >
+      <source id="audio-source" src={{url}}>
+        Your Fallback goes here
+    </audio>
   </div>
 </div>
 

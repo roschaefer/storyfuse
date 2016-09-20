@@ -1,31 +1,33 @@
-<h2 class="ui huge header">{{episode.title}}</h2>
+<div class="ui segment">
+  <div class="ui middle aligned stackable grid container">
+    <div class="row">
+      <div class="column">
+        {{audio-player title=episode.title url=episode.url}}
 
-{{audio-player url=episode.url}}
+          <p>
 
+          {{#if episode.parent}}
+            {{#link-to 'episode' episode.parent class="ui large left floated primary button"}}
+            <i class="ui icon remove"></i>
+            Back
+            {{/link-to}}
+          {{/if}}
 
-<p>
-{{#if episode.parent}}
-{{#link-to 'episode' episode.parent class="ui huge primary button"}}
-  <i class="ui icon remove"></i>
-  Don't like
-{{/link-to}}
-{{/if}}
-</p>
+          {{#if deadEnd}}
+          <button class="ui large right floated primary button">
+            <i class="ui icon circle"></i>
+            Record
+          </button>
+          {{else}}
+            {{#each episode.children as |child|}}
+              {{#link-to 'episode' child class="ui large right floated primary button"}}
+              {{child.title}}
+              {{/link-to}}
+            {{/each}}
+          {{/if}}
 
-<p>
-{{#if deadEnd}}
-<button class="ui huge primary button">
-  <i class="ui icon circle"></i>
-Record
-</button>
-{{else}}
-  {{#each episode.children as |child|}}
-  {{#link-to 'episode' child class="ui huge primary button"}}
-    {{child.title}}
-{{/link-to}}
-{{/each}}
-{{/if}}
-</p>
-
-
-{{yield}}
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
