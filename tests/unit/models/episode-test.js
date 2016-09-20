@@ -2,7 +2,7 @@ import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('episode', 'Unit | Model | episode', {
   // Specify the other units that are required for this test.
-  needs: ['model:podcast']
+  needs: []
 });
 
 test('it exists', function(assert) {
