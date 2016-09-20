@@ -1,12 +1,63 @@
 export default function() {
   this.namespace = '/api';
-  this.get('/episodes/:episode_id', function() {
+  this.get('/episodes/1', function() {
     return {
       data: {
         type: 'episodes',
         id:1,
         attributes: {
-          title: 'Such a great episode',
+          title: 'First episode',
+        }
+      }
+    };
+  });
+
+  this.get('/episodes/2', function() {
+    return {
+      data: {
+        type: 'episodes',
+        id:2,
+        attributes: {
+          title: 'Next episode',
+        },
+        "relationships": {
+          "parent": {
+            "data": {"id": "1", "type": "episodes"}
+          }
+        }
+      }
+    };
+  });
+
+  this.get('/episodes/3', function() {
+    return {
+      data: {
+        type: 'episodes',
+        id:3,
+        attributes: {
+          title: 'Third episode',
+        },
+        "relationships": {
+          "parent": {
+            "data": {"id": "2", "type": "episodes"}
+          }
+        }
+      }
+    };
+  });
+
+  this.get('/episodes/4', function() {
+    return {
+      data: {
+        type: 'episodes',
+        id:4,
+        attributes: {
+          title: 'A different ending',
+        },
+        "relationships": {
+          "parent": {
+            "data": {"id": "2", "type": "episodes"}
+          }
         }
       }
     };

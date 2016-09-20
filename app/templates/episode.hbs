@@ -2,9 +2,11 @@
 
 <h1>{{model.title}}</h1>
 
-<button>
+{{#if model.parent}}
+{{#link-to 'episode' model.parent}}
   Don't like
-</button>
+  {{/link-to}}
+{{/if}}
 
 <button>
   Record
