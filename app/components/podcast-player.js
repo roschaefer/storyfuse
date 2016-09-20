@@ -14,4 +14,11 @@ export default Ember.Component.extend({
       this.set('nextEpisode', nextEpisode);
     }
   },
+  didRender(){
+    let episode = this.get('episode');
+    this.$("#audio-source").attr('src', episode.get('url'));
+    let audio = this.$("#audio").get(0);
+    audio.load();
+    audio.play();
+  }
 });
