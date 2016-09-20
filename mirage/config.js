@@ -6,4 +6,8 @@ export default function() {
     episode.children = children.models;
     return episode;
   });
+  this.post('/episodes', (db, request) => {
+    console.log(request);
+    return JSON.parse(request.requestBody);
+  });
 }
