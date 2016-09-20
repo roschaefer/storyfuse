@@ -7,7 +7,15 @@ export default function() {
         id:1,
         attributes: {
           title: 'First episode',
+        },
+        "relationships": {
+          "children": {
+            "data": [
+              {"id": "2", "type": "episodes"}
+            ]
+          }
         }
+
       }
     };
   });
@@ -23,6 +31,11 @@ export default function() {
         "relationships": {
           "parent": {
             "data": {"id": "1", "type": "episodes"}
+          },"children": {
+            "data": [
+              {"id": "3", "type": "episodes"},
+              {"id": "4", "type": "episodes"}
+            ]
           }
         }
       }

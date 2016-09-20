@@ -1,13 +1,23 @@
 {{yield}}
 
+<p>
 {{#if episode.parent}}
 {{#link-to 'episode' episode.parent}}
   Don't like
 {{/link-to}}
 {{/if}}
+</p>
 
+<p>
 {{#if deadEnd}}
 <button>
 Record
 </button>
+{{else}}
+  {{#each episode.children as |child|}}
+  {{#link-to 'episode' child}}
+    {{child.title}}
+{{/link-to}}
+{{/each}}
 {{/if}}
+</p>
