@@ -30,6 +30,7 @@ export default Ember.Component.extend({
     } else {
       this.set('firstAlternative', null);
       this.set('secondAlternative', null);
+      this.set('ancestors', []);
     }
 
   }
