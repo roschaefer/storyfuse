@@ -27,6 +27,9 @@ export default Ember.Component.extend({
       }
       this.get('ancestors').reverse();
 
+    } else {
+      this.set('firstAlternative', null);
+      this.set('secondAlternative', null);
     }
 
   }
