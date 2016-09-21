@@ -26,7 +26,6 @@ export default Ember.Component.extend({
         ancestorParent = ancestorParent.get('parent');
       }
       this.get('ancestors').reverse();
-      console.log(this.get('ancestors'));
 
     }
 
