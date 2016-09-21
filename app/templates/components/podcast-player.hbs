@@ -3,7 +3,19 @@
     <div class="row">
       <div class="column">
         <div class="ui segment">
-            <p>Level: 1</p>
+          <div class="ui breadcrumb">
+            {{#each ancestors as |ancestor|}}
+              {{#link-to 'episode' ancestor class="section"}}
+              {{ancestor.id}}
+              {{/link-to}}
+              <i class="right chevron icon divider"></i>
+            {{/each}}
+            {{#link-to 'episode' episode class="active section"}}
+            {{episode.id}}
+            {{/link-to}}
+
+          </div>
+
         </div>
       </div>
     </div>
