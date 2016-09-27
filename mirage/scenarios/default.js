@@ -11,43 +11,43 @@ export default function( server ) {
   //
   let start = server.create('episode', {
     title: 'So it begins',
-    url: 'http://betterwithmusic.com/Music/songs/Rossio.mp3',
+    url: 'https://a.clyp.it/zfei2qca.mp3',
   });
 
   let continues   = server.create('episode', {
     title: 'And it continues',
-    url: 'http://betterwithmusic.com/Music/songs/Sirens.mp3',
+    url: 'https://a.clyp.it/nh4u01eb.mp3',
     parent: start
   });
 
   let notYet = server.create('episode', {
     title: 'Story is not yet over',
-    url: 'http://betterwithmusic.com/Music/songs/Montmartre.mp3',
+    url: 'https://a.clyp.it/uit5cq3r.mp3',
     parent: continues
   });
 
   server.create('episode', {
     title: 'This is an alternative end',
-    url: 'http://betterwithmusic.com/Music/songs/Breaking_Bad.mp3',
+    url: 'https://a.clyp.it/uh3nx3ai.mp3',
     parent: continues
   });
 
 
   server.create('episode', {
     title: 'Happy ending',
-    url: 'http://betterwithmusic.com/Music/songs/Dancing.mp3',
+    url: 'https://a.clyp.it/54if4iri.mp3',
     parent: notYet
   });
 
   server.create('episode', {
     title: 'Bad ending',
-    url: 'http://betterwithmusic.com/Music/songs/Poker.mp3',
+    url: 'https://a.clyp.it/mybjm2l5.mp3',
     parent: notYet
   });
 
   server.create('episode', {
     title: 'Weird ending',
-    url: 'http://betterwithmusic.com/Music/songs/Out_of_School.mp3',
+    url: 'https://a.clyp.it/4z4dodtz.mp3',
     parent: notYet
   });
 }
