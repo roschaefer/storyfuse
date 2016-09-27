@@ -1,20 +1,22 @@
 <div class="ui segment">
   <div class="ui middle aligned stackable grid container">
     <div class="row">
-      <div class="column">
-        <div class="ui segment">
+      <div class="sixteen wide column">
           <div class="ui breadcrumb">
-            {{#each ancestors as |ancestor|}}
+            {{#each ancestors as |ancestor index|}}
               {{#link-to 'episode' ancestor class="section"}}
-              {{ancestor.id}}
+                <div class="{{alternating-class-names index}}">
+                  {{ancestor.id}}
+                </div>
               {{/link-to}}
-              <i class="right chevron icon divider"></i>
+              <i class="breadcrumb-divider ui horizontal divider huge long arrow right icon"></i>
             {{/each}}
-            {{#link-to 'episode' episode class="active section"}}
-            {{episode.id}}
-            {{/link-to}}
 
-          </div>
+            {{#link-to 'episode' episode class="active section"}}
+              <div class="ui mini circular inverted segment">
+                {{episode.id}}
+              </div>
+            {{/link-to}}
 
         </div>
       </div>
