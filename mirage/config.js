@@ -7,4 +7,5 @@ export default function() {
     return episode;
   });
   this.post('/episodes');
+  this.passthrough('https://upload.clyp.it/upload');
 }
